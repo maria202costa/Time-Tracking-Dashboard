@@ -8,7 +8,7 @@
 }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
   background-color: hsl(226, 43%, 10%);
   display: flex;
   justify-content: center;
@@ -122,6 +122,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 25px 20px 20px 20px;
+    align-items: center;
   }
   & .title {
     font-weight: 500;
@@ -148,4 +149,150 @@ body {
 .card-info:hover {
   background-color: hsl(235, 45%, 61%);
   transition: 0.3s;
+}
+
+/*Media Queries*/
+@media (max-width: 1040px) {
+  body {
+    max-width: 1040px;
+  }
+  .main-container {
+    margin: 50px 0px 50px 0px;
+    gap: 15px;
+  }
+  .dashboard-div {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  body {
+    width: 768px;
+  }
+  .main-container {
+    gap: 20px;
+    margin: 85px 0px 85px 0px;
+  }
+
+  .profile-div {
+    width: 160px;
+  }
+  .avatar {
+    padding-bottom: 60px;
+
+    & img {
+      margin-left: 40px;
+    }
+    & p,
+    h1 {
+      text-align: center;
+      margin: none;
+    }
+    & h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .dashboard-div {
+    gap: 15px;
+  }
+  .time-tracking-divs {
+    width: 160px;
+  }
+  .card-image {
+    width: 160px;
+  }
+  .card-img {
+    width: 60px;
+    height: 50px;
+  }
+  .card-info {
+    width: 160px;
+
+    & h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    & p.timeframes-p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  body {
+    width: 425px;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 15px 170px 15px;
+    gap: 20px;
+  }
+  .profile-div {
+    width: 395px;
+  }
+  .avatar {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    & p,
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+  }
+  .switch-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    & #daily-btn,
+    #weekly-btn,
+    #monthly-btn {
+      margin: 15px 0px 15px 0px;
+    }
+  }
+  .dashboard-div {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+  }
+  .time-tracking-divs {
+    width: 395px;
+  }
+  .card-image {
+    width: 395px;
+  }
+  .card-img {
+    width: 80px;
+    height: 58px;
+    margin-left: 75%;
+  }
+  .card-info {
+    width: 395px;
+    height: 130px;
+
+    & div {
+      padding: 25px 25px 5px 25px;
+    }
+    & .title,
+    div i {
+      font-size: 22px;
+    }
+    & h2 {
+      display: inline;
+      font-size: 2.5rem;
+      margin: 0px 0px 5px 25px;
+    }
+    & p.timeframes-p {
+      display: inline-block;
+      font-size: 18px;
+      margin-left: 50px;
+      transform: translate(0px, -5px);
+    }
+  }
 }
