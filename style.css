@@ -8,6 +8,7 @@
 }
 
 body {
+  min-width: 1025px;
   max-width: 1440px;
   background-color: hsl(226, 43%, 10%);
   display: flex;
@@ -154,6 +155,7 @@ body {
 /*Media Queries*/
 @media (max-width: 1040px) {
   body {
+    min-width: 769px;
     max-width: 1040px;
   }
   .main-container {
@@ -167,7 +169,8 @@ body {
 
 @media (max-width: 769px) {
   body {
-    width: 768px;
+    min-width: 426px;
+    max-width: 768px;
   }
   .main-container {
     gap: 20px;
@@ -221,7 +224,8 @@ body {
 
 @media (max-width: 426px) {
   body {
-    width: 425px;
+    min-width: 320px;
+    max-width: 425px;
   }
   .main-container {
     display: flex;
